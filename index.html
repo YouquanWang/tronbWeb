@@ -12,7 +12,7 @@
 <script>
   window.onload = function () {
     var Inval = setInterval(() => {
-      alert(window.tronWeb)
+      alert(window.tronWeb.defaultAddress)
      this.defaultAddress = window.tronWeb.defaultAddress.base58?window.tronWeb.defaultAddress.base58 : ''
      //当获取到地址的时候就关掉定时器
      if(this.defaultAddress){
