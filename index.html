@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="color: #333; font-size: 20px; text-align: center;">tronWeb</div>
+</body>
+<script>
+  window.onload = function () {
+    var Inval = setInterval(() => {
+     this.defaultAddress = window.tronWeb.defaultAddress.base58?window.tronWeb.defaultAddress.base58 : ''
+     //当获取到地址的时候就关掉定时器
+     if(this.defaultAddress){
+        alert(this.defaultAddress)
+     	window.clearInterval(Inval);
+     }
+  }, 1000);
+  }
+</script>
+</html>
